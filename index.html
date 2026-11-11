@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ee">
+  <meta name="description" content="생각하는 게임, 생각하는 개발. 생각을 즐기는 게임 클라이언트 프로그래머 조범규입니다.">
+  <style>
+    /* 색상과 간격은 여기서, 소개 문구는 아래 body에서 수정하세요. */
+    :root {
+      color-scheme: light;
+      --paper: #f5f4ee;
+      --ink: #242c28;
+      --muted: #505850;
+      --line: #d6d9ce;
+      --accent: #d8ee89;
+      --max-width: 1280px;
+    }
+    * { box-sizing: border-box; }
+    html { min-width: 280px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+    ::selection { background: var(--accent); color: var(--ink); }
+    .page {
+      width: min(calc(100% - 112px), var(--max-width));
+      margin-inline: auto;
+    }
+    .masthead {
+      padding-block: 34px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    .name { font-size: 17px; font-weight: 700; letter-spacing: -.04em; }
+    .mark {
+      width: 10px;
+      height: 10px;
+      background: var(--ink);
+      border-radius: 50%;
+    }
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      align-items: center;
+      gap: 28px;
+      padding-block: clamp(64px, 8vw, 112px) 76px;
+    }
+    .hero-copy { position: relative; z-index: 1; }
+    h1 {
+      margin: 0;
+      font-size: clamp(48px, 5.6vw, 78px);
+      line-height: 1.28;
+      letter-spacing: -.07em;
+      font-weight: 800;
+    }
+    .headline-line { display: block; white-space: nowrap; }
+    .highlight {
+      background: linear-gradient(transparent 69%, var(--accent) 69%, var(--accent) 94%, transparent 94%);
+      padding-right: .08em;
+    }
+    .introduction {
+      margin: 34px 0 0;
+      font-size: clamp(19px, 1.8vw, 24px);
+      line-height: 1.8;
+      letter-spacing: -.045em;
+    }
+    .introduction strong { font-weight: 750; }
+    /* 순수 CSS 장식: 외부 이미지나 라이브러리 없이 표시됩니다. */
+    .art {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 1;
+      justify-self: end;
+      isolation: isolate;
+    }
+    .art::before {
+      content: "";
+      position: absolute;
+      inset: 7%;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .orbit {
+      position: absolute;
+      inset: 17% -2%;
+      border: 1px solid rgba(36, 44, 40, .55);
+      border-radius: 50%;
+      transform: rotate(-37deg);
+    }
+    .orbit.second { inset: -2% 29%; transform: rotate(-37deg); }
+    .core {
+      position: absolute;
+      inset: 28%;
+      background: var(--ink);
+      border-radius: 28%;
+      transform: rotate(-16deg);
+      box-shadow: 12px 16px 0 rgba(36, 44, 40, .09);
+    }
+    .core::before, .core::after {
+      content: "";
+      position: absolute;
+      background: var(--accent);
+      border-radius: 2px;
+      inset: 46% 30%;
+    }
+    .core::after { transform: rotate(90deg); }
+    .satellite {
+      position: absolute;
+      width: 8%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--ink);
+      left: 10%;
+      top: 63%;
+      border: 6px solid var(--paper);
+      box-sizing: content-box;
+    }
+    .spark {
+      position: absolute;
+      width: 7%;
+      aspect-ratio: 1;
+      top: 8%;
+      right: 15%;
+      background: var(--paper);
+      transform: rotate(45deg);
+      border: 1px solid var(--ink);
+    }
+    .about {
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      padding-block: 38px 64px;
+    }
+    .about p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 2;
+      letter-spacing: -.035em;
+    }
+    .about strong { color: var(--ink); font-weight: 650; }
+    @media (min-width: 1600px) {
+      .page { padding-top: 28px; }
+      .hero { padding-block: 120px 100px; }
+    }
+    @media (max-width: 1000px) {
+      .page { width: calc(100% - 64px); }
+      .hero { grid-template-columns: 1.7fr 1fr; gap: 14px; }
+      h1 { font-size: clamp(40px, 5.8vw, 58px); }
+      .about { gap: 36px; }
+      .art { max-width: 300px; }
+    }
+    @media (max-width: 680px) {
+      .page { width: calc(100% - 44px); }
+      .masthead { padding-block: 25px; }
+      .name { font-size: 16px; }
+      .hero { grid-template-columns: 1fr; padding-block: 54px 34px; gap: 22px; }
+      h1 { font-size: clamp(34px, 9.5vw, 60px); line-height: 1.32; }
+      .introduction { font-size: 18px; margin-top: 24px; line-height: 1.85; }
+      .art { width: 65%; max-width: 250px; margin-right: 4%; }
+      .about { grid-template-columns: 1fr; gap: 23px; padding-block: 28px 44px; }
+      .about p { font-size: 16px; line-height: 1.95; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-copy, .art, .about { animation: enter .65s ease-out both; }
+      .art { animation-delay: .08s; }
+      .about { animation-delay: .16s; }
+      @keyframes enter {
+        from { opacity: 0; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+    @media print {
+      .page { width: 100%; }
+      .hero { padding-block: 40px; }
+      .art { max-width: 220px; }
+      .hero-copy, .art, .about { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main>
+      <section class="hero" aria-labelledby="headline">
+        <div class="hero-copy">
+          <h1 id="headline">
+            <span class="headline-line">생각하는 게임,</span>
+            <span class="headline-line"><span class="highlight">생각하는 개발.</span></span>
+          </h1>
+          <p class="introduction">
+            생각을 즐기는 게임 클라이언트 프로그래머<br>
+            <strong>조범규</strong>입니다.
+          </p>
+        </div>
+        <div class="art" aria-hidden="true">
+          <div class="orbit"></div>
+          <div class="orbit second"></div>
+          <div class="core"></div>
+          <div class="satellite"></div>
+          <div class="spark"></div>
+        </div>
+      </section>
+      <section class="about" aria-label="소개">
+        <p>
+          다양한 아이디어를 나누며 <strong>해결책을 찾는 것을 좋아하고,</strong>
+          해결이 필요한 문제에는 먼저 나섭니다.
+        </p>
+        <p>
+          개발할 때는 프로젝트의 규모와 개발 일정에 맞는 구조를 설계하고
+          <strong>성능 병목을 개선해 쾌적한 플레이 경험</strong>을 만드는 데 힘씁니다.
+        </p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
