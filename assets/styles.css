@@ -75,13 +75,7 @@ h1 {
   letter-spacing: -.035em;
   font-weight: 600;
 }
-.introduction {
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.7;
-  letter-spacing: -.045em;
-}
+
 .portrait {
   width: 100%;
   max-width: 320px;
@@ -98,8 +92,8 @@ h1 {
   height: auto;
 }
 .hero-summary { margin-top: 24px; max-width: 640px; }
-.hero-summary p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.85; letter-spacing: -.035em; }
-.hero-summary p + p { margin-top: 12px; }
+.hero-summary p { margin: 0; color: var(--muted); font-size: 20px; line-height: 1.8; letter-spacing: -.035em; }
+.hero-summary p + p { margin-top: 18px; }
 .hero-summary strong { color: var(--ink); font-weight: 650; }
 
 
@@ -251,9 +245,9 @@ a:focus-visible, summary:focus-visible {
   .identity { margin-top: 28px; padding-left: 16px; }
   .profile-name { font-size: 38px; }
   .profile-role { font-size: 17px; margin-top: 8px; }
-  .introduction { font-size: 15px; }
+
   .portrait { width: 72%; max-width: 260px; justify-self: center; margin-top: 12px; border-radius: 20px; }
-  .hero-summary p { font-size: 15px; }
+  .hero-summary p { font-size: 18px; }
   .section-nav { gap: 14px 22px; font-size: 14px; }
   .resume-section { grid-template-columns: 1fr; gap: 28px; padding-block: 44px; }
   .section-heading h2 { font-size: 27px; }
