@@ -301,13 +301,8 @@ a:focus-visible, summary:focus-visible {
 
 
 
-/* 소개: 소신과 학습 이력을 한눈에 읽는 두 열 구성 */
-.resume-section.about-section { display: block; }
-.about-heading { text-align: center; margin-bottom: 44px; }
-.about-heading h2 { margin: 0; font-size: 32px; letter-spacing: -.05em; }
-.about-heading::after { content: ""; display: block; width: 52px; height: 3px; margin: 18px auto 0; border-radius: 2px; background: var(--accent); }
-.about-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: start; }
-.about-copy h3 { margin: 0 0 22px; font-size: clamp(22px, 2.3vw, 28px); line-height: 1.5; letter-spacing: -.04em; }
+/* 소개: 공통 섹션 제목 옆에 기술 경험과 학습 이력 배치 */
+.about-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: start; min-width: 0; }
 .about-copy p { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.95; letter-spacing: -.025em; }
 .about-copy p + p { margin-top: 24px; }
 .about-background { display: grid; gap: 22px; min-width: 0; }
@@ -330,13 +325,10 @@ a:focus-visible, summary:focus-visible {
 .training-card .background-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin: 0 0 7px; font-size: 12px; font-variant-numeric: tabular-nums; }
 .training-card .background-meta span { font-size: 11px; }
 @media (max-width: 1000px) {
-  .about-layout { grid-template-columns: 1.25fr 1fr; gap: 28px; }
+  .about-layout { grid-template-columns: 1fr; gap: 32px; }
   .background-card { padding: 22px 20px; }
 }
 @media (max-width: 680px) {
-  .about-heading { margin-bottom: 32px; }
-  .about-heading h2 { font-size: 27px; }
-  .about-layout { grid-template-columns: 1fr; gap: 32px; }
   .about-copy p { font-size: 16px; line-height: 1.9; }
   .about-copy p + p { margin-top: 20px; }
   .about-background { gap: 18px; }
