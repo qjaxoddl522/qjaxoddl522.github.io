@@ -1,0 +1,8 @@
+Generated with the built-in ImageGen tool.
+These illustrations describe project concepts and are not application screenshots.
+
+academic-manager-concept.png
+Create a wide 16:9 concept thumbnail for a Korean programmer portfolio: a C++ student records console application. Editorial software illustration, overlapping dark terminal windows showing a small student table, a search field motif and a local file folder, conveying student registration, search and file saving. Crisp restrained flat design, dark forest background #191f1b, white text and pale lime #d8ee89 accents, generous margins, readable at small size. Use only short English labels: STUDENT RECORDS, C++, SAVE, CONCEPT. This is an illustrative concept, not a real application screenshot. No institution branding, no copied reference text, no people, no watermark.
+
+algorithms-concept.png
+Create a wide 16:9 concept thumbnail for a Korean programmer portfolio: algorithm problem solving in Python and C#. Editorial software illustration with overlapping dark panels containing a connected-node graph, ascending sorting bars and a compact dynamic-programming grid, plus a small code terminal. Crisp restrained flat design, dark forest background #191f1b, white text and pale lime #d8ee89 accents, generous margins, readable at small size. Use only short English labels: ALGORITHMS, Python, C#, CONCEPT. This is an illustrative concept, not a real application screenshot. No platform logos, no people, no watermark.

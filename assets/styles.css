@@ -2,7 +2,7 @@
 :root {
   color-scheme: dark;
   --paper: #121614;
-  --ink: #edf1e9;
+  --ink: #ffffff;
   --muted: #aab5ac;
   --line: #303b33;
   --accent: #d8ee89;
@@ -92,7 +92,7 @@ h1 {
   height: auto;
 }
 .hero-summary { margin-top: 24px; max-width: 640px; }
-.hero-summary p { margin: 0; color: var(--muted); font-size: 20px; line-height: 1.8; letter-spacing: -.035em; }
+.hero-summary p { margin: 0; color: var(--ink); font-size: 20px; line-height: 1.8; letter-spacing: -.035em; }
 .hero-summary p + p { margin-top: 18px; }
 .hero-summary strong { color: var(--ink); font-weight: 650; }
 
@@ -142,7 +142,7 @@ a:focus-visible {
 .section-heading h2 { margin: 0; font-size: 29px; letter-spacing: -.05em; }
 .section-heading > p:last-child:not(.section-number) {
   margin: 14px 0 0;
-  color: var(--muted);
+  color: var(--ink);
   font-size: 14px;
   line-height: 1.8;
 }
@@ -158,7 +158,7 @@ a:focus-visible {
 .project-heading .project-title { min-width: 0; }
 .project-title { margin: 0; font-size: 24px; line-height: 1.4; letter-spacing: -.035em; }
 .project-meta { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
-.project-description { margin: 18px 0 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+.project-description { margin: 18px 0 0; color: var(--ink); font-size: 16px; line-height: 1.8; }
 .project-points { padding-left: 20px; margin: 22px 0 0; font-size: 15px; line-height: 1.9; }
 .project-points li + li { margin-top: 10px; }
 .project-points li::marker { color: var(--muted); }
@@ -170,7 +170,6 @@ a:focus-visible {
 .project-links a { color: var(--accent); }
 .source-note { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 20px 0 0; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 28px; }
-.project-grid-text { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line); }
 .project-card { min-width: 0; }
 .project-media { height: 230px; margin: 0 0 24px; padding: 18px; display: flex; justify-content: center; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
 .project-media img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
@@ -284,7 +283,7 @@ a:focus-visible {
 
 /* 소개: 공통 섹션 제목 옆에 기술 경험과 학습 이력 배치 */
 .about-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: start; min-width: 0; }
-.about-copy p { margin: 0; color: var(--muted); font-size: 17px; line-height: 1.95; letter-spacing: -.025em; }
+.about-copy p { margin: 0; color: var(--ink); font-size: 17px; line-height: 1.95; letter-spacing: -.025em; }
 .about-copy p + p { margin-top: 24px; }
 .about-background { display: grid; gap: 22px; min-width: 0; }
 .background-card { padding: 24px 26px; border: 1px solid var(--line); border-radius: 18px; scroll-margin-top: 24px; }
@@ -296,7 +295,7 @@ a:focus-visible {
 .background-entry p { margin: 4px 0 0; font-size: 15px; line-height: 1.7; }
 .background-entry .background-meta { color: var(--muted); font-size: 13px; }
 .academic-card .background-entry h4 { font-size: 27px; line-height: 1.4; letter-spacing: -.045em; }
-.academic-card .background-entry p { color: var(--muted); }
+.academic-card .background-entry p { color: var(--ink); }
 .academic-facts { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--line); }
 .academic-facts dt { color: var(--muted); font-size: 11px; margin-bottom: 7px; }
 .academic-facts dd { margin: 0; font-size: 13px; line-height: 1.7; }
