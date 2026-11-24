@@ -158,6 +158,8 @@ a:focus-visible {
 .project-heading .project-title { min-width: 0; }
 .project-title { margin: 0; font-size: 24px; line-height: 1.4; letter-spacing: -.035em; }
 .project-meta { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.project-tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+.project-tech-stack .skill-tag { font-size: 14px; line-height: 1.4; white-space: nowrap; }
 .project-description { margin: 18px 0 0; color: var(--ink); font-size: 16px; line-height: 1.8; }
 .project-points { padding-left: 28px; margin: 26px 0 0; font-size: 15px; line-height: 1.9; }
 .project-points li + li { margin-top: 12px; }
@@ -169,6 +171,9 @@ a:focus-visible {
 .project-links { display: flex; align-items: center; flex: 0 0 auto; gap: 6px; }
 .project-links a { color: var(--accent); }
 .source-note { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 20px 0 0; }
+.project-review-link { margin: 12px 0 0; font-size: 14px; line-height: 1.8; }
+.project-review-link a { color: var(--accent); }
+.project-review-link span { display: block; color: var(--muted); }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 28px; }
 .project-card { min-width: 0; }
 .project-media { height: 230px; margin: 0 0 24px; padding: 18px; display: flex; justify-content: center; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
