@@ -288,11 +288,11 @@ a:focus-visible {
 
 
 
-/* 소개: 공통 섹션 제목 옆에 기술 경험과 학습 이력 배치 */
-.about-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 28px; align-items: start; min-width: 0; }
+/* 소개문 아래에 학력과 교육을 나란히 배치 */
+.about-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; align-items: start; min-width: 0; }
 .about-copy p { margin: 0; color: var(--ink); font-size: 17px; line-height: 1.95; letter-spacing: -.025em; }
 .about-copy p + p { margin-top: 24px; }
-.about-background { display: grid; gap: 22px; min-width: 0; }
+.about-background { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; min-width: 0; }
 .background-card { padding: 24px 26px; border: 1px solid var(--line); border-radius: 18px; scroll-margin-top: 24px; }
 .academic-card { background: var(--surface); }
 .background-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
@@ -318,7 +318,7 @@ a:focus-visible {
 @media (max-width: 680px) {
   .about-copy p { font-size: 16px; line-height: 1.9; }
   .about-copy p + p { margin-top: 20px; }
-  .about-background { gap: 18px; }
+  .about-background { grid-template-columns: minmax(0, 1fr); gap: 18px; }
 }
 @media print {
   .about-copy, .background-card { break-inside: avoid; }
