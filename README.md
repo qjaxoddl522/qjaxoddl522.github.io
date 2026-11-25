@@ -7,6 +7,7 @@
 - 로컬 `D:/Desktop/학교/3학년 2학기/데이터베이스프로그래밍/프로젝트/webapp` 소스에서 확인했습니다.
 - `index.jsp`의 스낵몰 제목과 Java 페이지 선언, `order.jsp`의 JDBC 및 MySQL 쿼리 코드, 프런트엔드의 JavaScript와 Bootstrap 사용을 근거로 기술 태그를 작성했습니다.
 - 기존 GitHub 링크인 `qjaxoddl522/WebProTask`는 클라우드 컴퓨팅 소개 페이지이므로 스낵몰 카드에서 제거했습니다.
+- 스낵몰 카드의 GitHub 자료 링크는 사용자가 제공한 [Snackmall 저장소](https://github.com/qjaxoddl522/Snackmall)로 연결했습니다.
 
 ## Planter 리뷰 보관본
 

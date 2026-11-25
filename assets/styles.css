@@ -158,22 +158,23 @@ a:focus-visible {
 .project-heading .project-title { min-width: 0; }
 .project-title { margin: 0; font-size: 24px; line-height: 1.4; letter-spacing: -.035em; }
 .project-meta { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.project-evidence { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.8; }
+.project-evidence span { color: var(--muted); }
+.project-evidence a { color: var(--accent); }
 .project-tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
 .project-tech-stack .skill-tag { font-size: 14px; line-height: 1.4; white-space: nowrap; }
-.project-description { margin: 18px 0 0; color: var(--ink); font-size: 16px; line-height: 1.8; }
-.project-points { padding-left: 28px; margin: 26px 0 0; font-size: 15px; line-height: 1.9; }
+.project-description { margin: 20px 0 0; padding-bottom: 16px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 17px; font-weight: 600; line-height: 1.75; }
+.project-points { padding-left: 28px; margin: 16px 0 0; color: var(--ink); font-size: 16px; font-weight: 400; line-height: 1.9; }
 .project-points li + li { margin-top: 12px; }
 .project-points li::marker { content: "+  "; color: var(--accent); font-size: 18px; font-weight: 800; }
 .project-points strong { color: var(--accent); font-weight: 650; }
+.project-development-note { margin: 16px 0 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
 .project-icon-link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 8px; vertical-align: middle; text-decoration: none; }
 .project-icon-link img { display: block; }
 .project-icon-link:hover { background: var(--highlight); border-color: var(--accent); }
 .project-links { display: flex; align-items: center; flex: 0 0 auto; gap: 6px; }
 .project-links a { color: var(--accent); }
 .source-note { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 20px 0 0; }
-.project-review-link { margin: 12px 0 0; font-size: 14px; line-height: 1.8; }
-.project-review-link a { color: var(--accent); }
-.project-review-link span { display: block; color: var(--muted); }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 28px; }
 .project-card { min-width: 0; }
 .project-media { height: 230px; margin: 0 0 24px; padding: 18px; display: flex; justify-content: center; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
@@ -244,6 +245,7 @@ a:focus-visible {
   .skill-row { grid-template-columns: 1fr; gap: 12px; }
   .skill-tag { font-size: 15px; }
   .project-title { font-size: 22px; }
+  .project-heading { flex-wrap: wrap; }
   .project-media { height: 220px; }
   .contact-row { grid-template-columns: 1fr; gap: 4px; }
   .site-footer { align-items: flex-start; }
