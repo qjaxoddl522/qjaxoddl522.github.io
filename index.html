@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#121614">
   <meta name="description" content="게임 클라이언트 프로그래머 조범규입니다. Unity와 C# 기반 UI 구현, 콘텐츠 제작 도구 개발 경험을 소개합니다.">
   <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/projects.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#about">이력서 본문으로 바로가기</a>
@@ -105,12 +106,12 @@
         <header class="section-heading">
           <p class="section-number">03 / PROJECTS</p>
           <h2 id="projects-title">프로젝트</h2>
-          <p>게임 개발과 도구 제작<br>주요 구현 기능</p>
+          <p>게임 개발과 도구 제작<br>NRF 카드에서 문제 해결과 기술 선택 과정을 확인하세요.</p>
         </header>
         <div class="project-content">
           <!-- 프로젝트 링크는 영상, 실행/스토어, GitHub 순서로 배치합니다. -->
           <div class="project-grid">
-            <article class="project-card" aria-labelledby="nrf-title">
+            <article class="project-card" aria-labelledby="nrf-title" data-detail="nrf-detail">
               <figure class="project-media">
                 <img src="assets/projects/nrf.jpg" alt="No Results Found의 단서 조사와 인물 정보, 채팅이 표시된 인게임 화면" width="1920" height="1080" loading="lazy" decoding="async">
               </figure>
@@ -125,41 +126,19 @@
               <p class="project-meta"><span>2026.06 – 2026.08</span><span>2개월</span><span>4인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Unity</li><li class="skill-tag">C#</li></ul>
               <p class="project-description">디지털 기록과 단서를 연결하는 사건 추적 미스터리 어드벤처</p>
-              <ul class="project-points">
-                <li>가상 OS의 프로그램 실행, 창 관리 및 작업 표시줄 구조 설계</li>
-                <li>브라우저와 키워드 검색, 채팅 및 보고서 UI의 동작 흐름 설계</li>
-                <li>스토리 진행 연동 방식 설계</li>
-                <li>저장 시스템 구축</li>
-                <li>콘텐츠 일괄 입력과 검증을 위한 제작 에디터 설계</li>
-              </ul>
-              <p class="project-development-note">위 시스템의 설계는 직접 수행했으며, 코드 작성에는 AI를 상당 부분 활용했습니다.</p>
-              <p class="source-note">Steam 평가 2,000+ / 압도적으로 긍정적</p>
-            </article>
-            <article class="project-card" aria-labelledby="yca-title">
-              <figure class="project-media">
-                <img src="assets/projects/yca.jpg" alt="유튜브 댓글 분석기 (YCA)의 분석 그래프와 순위표 화면" width="300" height="169" loading="lazy" decoding="async">
-              </figure>
-              <div class="project-heading">
-                <h3 class="project-title" id="yca-title">유튜브 댓글 분석기 (YCA)</h3>
-                <div class="project-links">
-                  <a href="https://youtu.be/Q5sHMpIH5vY" target="_blank" rel="noopener noreferrer" aria-label="유튜브 댓글 분석기 (YCA) YouTube 영상, 새 탭" class="project-icon-link" title="영상 보기"><img src="assets/youtube.svg" width="22" height="22" alt="" aria-hidden="true"></a>
-                  <a href="https://github.com/qjaxoddl522/YCA" target="_blank" rel="noopener noreferrer" aria-label="유튜브 댓글 분석기 (YCA) GitHub 코드, 새 탭" class="project-icon-link" title="GitHub 열기"><img src="assets/github.svg" width="22" height="22" alt="" aria-hidden="true"></a>
-                </div>
+              <div class="project-details">
+                <ul class="project-points">
+                  <li>가상 OS의 프로그램 실행, 창 관리 및 작업 표시줄 구조 설계</li>
+                  <li>브라우저와 키워드 검색, 채팅 및 보고서 UI의 동작 흐름 설계</li>
+                  <li>스토리 진행 연동 방식 설계</li>
+                  <li>저장 시스템 구축</li>
+                  <li>콘텐츠 일괄 입력과 검증을 위한 제작 에디터 설계</li>
+                </ul>
+                <p class="project-development-note">위 시스템의 설계는 직접 수행했으며, 코드 작성에는 AI를 상당 부분 활용했습니다.</p>
+                <p class="source-note">Steam 평가 2,000+ / 압도적으로 긍정적</p>
               </div>
-              <p class="project-meta"><span>2025년 2학기</span><span>4인</span></p>
-              <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Unity</li><li class="skill-tag">C#</li></ul>
-              <p class="project-description">유튜브 댓글의 키워드와 긍정 및 부정 반응 분석 도구</p>
-              <ul class="project-points">
-                <li>Unity 기반 사용자 인터페이스 설계 및 통합 구현 총괄</li>
-                <li>영상과 키워드 검색 결과, 기간별 분석 결과의 그래프 및 순위표 시각화</li>
-              </ul>
-              <p class="project-evidence">
-                <span>관련 자료</span>
-                <a href="https://github.com/qjaxoddl522/YCA/tree/main/Assets/Scripts/Result%20-%20Link" target="_blank" rel="noopener noreferrer">영상 검색 결과 UI 코드</a>
-                <a href="https://github.com/qjaxoddl522/YCA/tree/main/Assets/Scripts/Result%20-%20Keyword" target="_blank" rel="noopener noreferrer">키워드 분석 UI 코드</a>
-              </p>
             </article>
-            <article class="project-card" aria-labelledby="planter-title">
+            <article class="project-entry" aria-labelledby="planter-title">
               <figure class="project-media">
                 <img src="assets/projects/planter.png" alt="Planter에서 집 양옆에 식물을 배치하고 다가올 적을 확인하는 플레이 화면" width="955" height="573" loading="lazy" decoding="async">
               </figure>
@@ -174,18 +153,20 @@
               <p class="project-meta"><span>2025.02</span><span>1개월</span><span>1인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Unity 6</li><li class="skill-tag">C#</li></ul>
               <p class="project-description">1분간 식물을 키우고 1분간 집을 방어하며 5일 동안 생존하는 디펜스 게임</p>
-              <ul class="project-points">
-                <li>ScriptableObject로 식물과 적 데이터 관리</li>
-                <li>MVP 패턴을 적용해 시간과 코인 UI와 데이터의 결합도 완화</li>
-                <li>상속과 오버라이딩으로 식물과 적 행동 구현</li>
-              </ul>
-              <p class="project-evidence">
-                <span>관련 자료</span>
-                <a href="reviews/planter/index.html">콘테스트 리뷰 보관본(운영자 제공 백업 자료)</a>
-              </p>
-              <p class="source-note">만들래 10분 게임 콘테스트 방치편 출품작</p>
+              <div class="project-details">
+                <ul class="project-points">
+                  <li>ScriptableObject로 식물과 적 데이터 관리</li>
+                  <li>MVP 패턴을 적용해 시간과 코인 UI와 데이터의 결합도 완화</li>
+                  <li>상속과 오버라이딩으로 식물과 적 행동 구현</li>
+                </ul>
+                <p class="project-evidence">
+                  <span>관련 자료</span>
+                  <a href="reviews/planter/index.html">콘테스트 리뷰 보관본(운영자 제공 백업 자료)</a>
+                </p>
+                <p class="source-note">만들래 10분 게임 콘테스트 방치편 출품작</p>
+              </div>
             </article>
-            <article class="project-card" aria-labelledby="rels-title">
+            <article class="project-entry" aria-labelledby="rels-title">
               <figure class="project-media">
                 <img src="assets/projects/rels.png" alt="Rels의 2인 분할 화면과 이동 경로, 시야가 표시된 전투 화면" width="600" height="393" loading="lazy" decoding="async">
               </figure>
@@ -200,20 +181,22 @@
               <p class="project-meta"><span>2022.06 – 2022.08</span><span>3개월</span><span>1인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">GameMaker Studio 2</li><li class="skill-tag">GML</li></ul>
               <p class="project-description">분할 화면으로 임무를 수행하는 2인 협동 전략 게임</p>
-              <ul class="project-points">
-                <li>플레이어별 카메라와 행동 쿨타임 구현</li>
-                <li>그리드 경로 탐색과 이동 범위 표시</li>
-                <li>거리와 엄폐물에 따른 명중률 계산</li>
-                <li>벽 가림 판정과 서피스 기반 시야 구현</li>
-              </ul>
-              <p class="project-evidence">
-                <span>관련 자료</span>
-                <a href="https://github.com/qjaxoddl522/Rels/blob/main/scripts/scr_hitrate/scr_hitrate.gml" target="_blank" rel="noopener noreferrer">명중률 계산 코드</a>
-                <a href="https://github.com/qjaxoddl522/Rels/blob/main/objects/obj_camera/Draw_0.gml" target="_blank" rel="noopener noreferrer">서피스 기반 시야 코드</a>
-              </p>
-              <p class="source-note">2022년 게임메이커 커뮤니티 대회 ‘대면시대’ 1위</p>
+              <div class="project-details">
+                <ul class="project-points">
+                  <li>플레이어별 카메라와 행동 쿨타임 구현</li>
+                  <li>그리드 경로 탐색과 이동 범위 표시</li>
+                  <li>거리와 엄폐물에 따른 명중률 계산</li>
+                  <li>벽 가림 판정과 서피스 기반 시야 구현</li>
+                </ul>
+                <p class="project-evidence">
+                  <span>관련 자료</span>
+                  <a href="https://github.com/qjaxoddl522/Rels/blob/main/scripts/scr_hitrate/scr_hitrate.gml" target="_blank" rel="noopener noreferrer">명중률 계산 코드</a>
+                  <a href="https://github.com/qjaxoddl522/Rels/blob/main/objects/obj_camera/Draw_0.gml" target="_blank" rel="noopener noreferrer">서피스 기반 시야 코드</a>
+                </p>
+                <p class="source-note">2022년 게임메이커 커뮤니티 대회 ‘대면시대’ 1위</p>
+              </div>
             </article>
-            <article class="project-card" aria-labelledby="boxveyor-title">
+            <article class="project-entry" aria-labelledby="boxveyor-title">
               <figure class="project-media paired">
                 <img src="assets/projects/boxveyor-1.png" alt="상자 분류 게임 (Boxveyor)의 컨베이어 벨트 생성 화면" width="169" height="302" loading="lazy" decoding="async">
                 <img src="assets/projects/boxveyor-2.png" alt="상자 분류 게임 (Boxveyor)의 플레이 화면" width="167" height="302" loading="lazy" decoding="async">
@@ -229,13 +212,41 @@
               <p class="project-meta"><span>2024.04 – 2024.06</span><span>3개월</span><span>1인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Unity</li><li class="skill-tag">C#</li></ul>
               <p class="project-description">무작위 컨베이어 벨트 기반 상자 분류 게임</p>
-              <ul class="project-points">
-                <li>백트래킹과 경로 주변 배치 제한을 활용한 벨트 생성 구현</li>
-                <li>공통 이동 로직의 기반 클래스 분리</li>
-                <li>상속을 활용한 분류 및 출입구 기능 구현</li>
-              </ul>
+              <div class="project-details">
+                <ul class="project-points">
+                  <li>백트래킹과 경로 주변 배치 제한을 활용한 벨트 생성 구현</li>
+                  <li>공통 이동 로직의 기반 클래스 분리</li>
+                  <li>상속을 활용한 분류 및 출입구 기능 구현</li>
+                </ul>
+              </div>
             </article>
-            <article class="project-card" aria-labelledby="spell-timer-title">
+            <article class="project-entry" aria-labelledby="yca-title">
+              <figure class="project-media">
+                <img src="assets/projects/yca.jpg" alt="유튜브 댓글 분석기 (YCA)의 분석 그래프와 순위표 화면" width="300" height="169" loading="lazy" decoding="async">
+              </figure>
+              <div class="project-heading">
+                <h3 class="project-title" id="yca-title">유튜브 댓글 분석기 (YCA)</h3>
+                <div class="project-links">
+                  <a href="https://youtu.be/Q5sHMpIH5vY" target="_blank" rel="noopener noreferrer" aria-label="유튜브 댓글 분석기 (YCA) YouTube 영상, 새 탭" class="project-icon-link" title="영상 보기"><img src="assets/youtube.svg" width="22" height="22" alt="" aria-hidden="true"></a>
+                  <a href="https://github.com/qjaxoddl522/YCA" target="_blank" rel="noopener noreferrer" aria-label="유튜브 댓글 분석기 (YCA) GitHub 코드, 새 탭" class="project-icon-link" title="GitHub 열기"><img src="assets/github.svg" width="22" height="22" alt="" aria-hidden="true"></a>
+                </div>
+              </div>
+              <p class="project-meta"><span>2025년 2학기</span><span>4인</span></p>
+              <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Unity</li><li class="skill-tag">C#</li></ul>
+              <p class="project-description">유튜브 댓글의 키워드와 긍정 및 부정 반응 분석 도구</p>
+              <div class="project-details">
+                <ul class="project-points">
+                  <li>Unity 기반 사용자 인터페이스 설계 및 통합 구현 총괄</li>
+                  <li>영상과 키워드 검색 결과, 기간별 분석 결과의 그래프 및 순위표 시각화</li>
+                </ul>
+                <p class="project-evidence">
+                  <span>관련 자료</span>
+                  <a href="https://github.com/qjaxoddl522/YCA/tree/main/Assets/Scripts/Result%20-%20Link" target="_blank" rel="noopener noreferrer">영상 검색 결과 UI 코드</a>
+                  <a href="https://github.com/qjaxoddl522/YCA/tree/main/Assets/Scripts/Result%20-%20Keyword" target="_blank" rel="noopener noreferrer">키워드 분석 UI 코드</a>
+                </p>
+              </div>
+            </article>
+            <article class="project-entry" aria-labelledby="spell-timer-title">
               <figure class="project-media">
                 <img src="assets/projects/spell-timer.jpg" alt="챔피언별 소환사 주문과 남은 시간을 보여주는 오버레이" width="135" height="200" loading="lazy" decoding="async">
               </figure>
@@ -248,19 +259,21 @@
               <p class="project-meta"><span>2024.01 – 2024.03</span><span>3개월</span><span>4인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Python</li><li class="skill-tag">PyQt5</li></ul>
               <p class="project-description">클릭으로 상대 소환사 주문 쿨타임을 기록하는 게임 오버레이</p>
-              <ul class="project-points">
-                <li>게임 API로 상대 정보와 주문 데이터 조회</li>
-                <li>룬, 아이템, 게임 모드에 따른 쿨타임 보정</li>
-                <li>재사용 시각 계산 및 단축키 채팅 입력</li>
-                <li>챔피언 표시 순서 변경 시 타이머 유지</li>
-              </ul>
-              <p class="project-evidence">
-                <span>관련 자료</span>
-                <a href="https://github.com/qjaxoddl522/LOL-SpellTimer/blob/main/LOL_SpellTimer.py#L63" target="_blank" rel="noopener noreferrer">게임 API 연동 코드</a>
-                <a href="https://github.com/qjaxoddl522/LOL-SpellTimer/blob/main/LOL_SpellTimer.py#L291" target="_blank" rel="noopener noreferrer">쿨타임 계산 코드</a>
-              </p>
+              <div class="project-details">
+                <ul class="project-points">
+                  <li>게임 API로 상대 정보와 주문 데이터 조회</li>
+                  <li>룬, 아이템, 게임 모드에 따른 쿨타임 보정</li>
+                  <li>재사용 시각 계산 및 단축키 채팅 입력</li>
+                  <li>챔피언 표시 순서 변경 시 타이머 유지</li>
+                </ul>
+                <p class="project-evidence">
+                  <span>관련 자료</span>
+                  <a href="https://github.com/qjaxoddl522/LOL-SpellTimer/blob/main/LOL_SpellTimer.py#L63" target="_blank" rel="noopener noreferrer">게임 API 연동 코드</a>
+                  <a href="https://github.com/qjaxoddl522/LOL-SpellTimer/blob/main/LOL_SpellTimer.py#L291" target="_blank" rel="noopener noreferrer">쿨타임 계산 코드</a>
+                </p>
+              </div>
             </article>
-            <article class="project-card" aria-labelledby="snackmall-title">
+            <article class="project-entry" aria-labelledby="snackmall-title">
               <figure class="project-media">
                 <img src="assets/projects/snackmall.png" alt="스낵몰의 주문 관리 화면" width="424" height="161" loading="lazy" decoding="async">
               </figure>
@@ -274,13 +287,15 @@
               <p class="project-meta"><span>2022년 2학기</span><span>4인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Java</li><li class="skill-tag">JSP</li><li class="skill-tag">MySQL</li><li class="skill-tag">JavaScript</li><li class="skill-tag">Bootstrap</li></ul>
               <p class="project-description">회원가입, 장바구니, 주문, 환불 및 판매자 관리 기능을 갖춘 쇼핑몰</p>
-              <ul class="project-points"><li>DB와 웹 연동 담당</li><li>사용자 요청에 따른 데이터 조회 및 변경 기능 구현</li></ul>
-              <p class="project-evidence">
-                <span>관련 자료</span>
-                <a href="https://github.com/qjaxoddl522/Snackmall/blob/main/order.jsp#L49" target="_blank" rel="noopener noreferrer">주문 데이터 조회 코드</a>
-              </p>
+              <div class="project-details">
+                <ul class="project-points"><li>DB와 웹 연동 담당</li><li>사용자 요청에 따른 데이터 조회 및 변경 기능 구현</li></ul>
+                <p class="project-evidence">
+                  <span>관련 자료</span>
+                  <a href="https://github.com/qjaxoddl522/Snackmall/blob/main/order.jsp#L49" target="_blank" rel="noopener noreferrer">주문 데이터 조회 코드</a>
+                </p>
+              </div>
             </article>
-            <article class="project-card" aria-labelledby="image-processing-title">
+            <article class="project-entry" aria-labelledby="image-processing-title">
               <figure class="project-media">
                 <img src="assets/projects/image-processing.jpg" alt="원본 이미지와 에지 검출 결과 비교 화면" width="332" height="200" loading="lazy" decoding="async">
               </figure>
@@ -290,14 +305,15 @@
               <p class="project-meta"><span>2022년 2학기</span><span>1인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Python</li><li class="skill-tag">OpenCV</li><li class="skill-tag">NumPy</li></ul>
               <p class="project-description">영상 필터링과 기하 변환 및 처리 결과 분석 실습</p>
-              <ul class="project-points">
-                <li>마스크 연산 기반 에지 검출 구현 및 OpenCV 함수 결과 비교</li>
-                <li>평균값 필터와 미디언 필터 적용</li>
-                <li>영상 확대, 축소, 이동, 회전 및 처리 결과 분석</li>
-              </ul>
-
+              <div class="project-details">
+                <ul class="project-points">
+                  <li>마스크 연산 기반 에지 검출 구현 및 OpenCV 함수 결과 비교</li>
+                  <li>평균값 필터와 미디언 필터 적용</li>
+                  <li>영상 확대, 축소, 이동, 회전 및 처리 결과 분석</li>
+                </ul>
+              </div>
             </article>
-            <article class="project-card" aria-labelledby="academic-manager-title">
+            <article class="project-entry" aria-labelledby="academic-manager-title">
               <figure class="project-media">
                 <img src="assets/projects/academic-manager-concept.png" alt="학생 정보 등록, 검색, 파일 저장 기능을 표현한 학사 관리 프로그램 개념 이미지" width="1672" height="941" loading="lazy" decoding="async">
               </figure>
@@ -307,9 +323,11 @@
               <p class="project-meta"><span>2025년 2학기</span><span>1인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">C++</li></ul>
               <p class="project-description">학생 정보 등록, 검색 및 파일 저장용 C++ 콘솔 프로그램</p>
-              <ul class="project-points"><li>학생 데이터, 관리 기능, 파일 입출력의 클래스 분리</li><li>vector 기반 목록 관리 및 실행 간 데이터 저장과 복원 구현</li></ul>
+              <div class="project-details">
+                <ul class="project-points"><li>학생 데이터, 관리 기능, 파일 입출력의 클래스 분리</li><li>vector 기반 목록 관리 및 실행 간 데이터 저장과 복원 구현</li></ul>
+              </div>
             </article>
-            <article class="project-card" aria-labelledby="algorithms-title">
+            <article class="project-entry" aria-labelledby="algorithms-title">
               <figure class="project-media">
                 <img src="assets/projects/algorithms-concept.png" alt="그래프, 정렬, 동적 계획법을 표현한 알고리즘 문제 해결 개념 이미지" width="1672" height="941" loading="lazy" decoding="async">
               </figure>
@@ -322,9 +340,11 @@
               <p class="project-meta"><span>2025.04 – 2026.09</span><span>18개월</span><span>1인</span></p>
               <ul class="project-tech-stack" aria-label="기술 스택"><li class="skill-tag">Python</li><li class="skill-tag">C#</li></ul>
               <p class="project-description">백준과 프로그래머스 알고리즘 문제 풀이 기록</p>
-              <ul class="project-points"><li>Union-Find, Dynamic Programming, 정렬 자료구조를 활용한 문제 해결</li></ul>
+              <div class="project-details">
+                <ul class="project-points"><li>Union-Find, Dynamic Programming, 정렬 자료구조를 활용한 문제 해결</li></ul>
+              </div>
             </article>
-            <article class="project-card" aria-labelledby="betacraft-title">
+            <article class="project-entry" aria-labelledby="betacraft-title">
               <figure class="project-media">
                 <img src="assets/projects/betacraft.png" alt="인디 게임 테스트 서비스 (BetaCraft) 사업계획 발표의 자금조달 계획 슬라이드" width="402" height="226" loading="lazy" decoding="async">
               </figure>
@@ -336,7 +356,9 @@
               </div>
               <p class="project-meta"><span>2025년 2학기</span><span>4인</span></p>
               <p class="project-description">인디 게임 개발자와 테스터를 연결하는 테스트 기록 및 QA 피드백 서비스 기획</p>
-              <ul class="project-points"><li>개발자, 테스터, 관리자별 기능 정의</li><li>테스트 참여와 인증, 피드백 절차 설계</li><li>사업계획 발표</li></ul>
+              <div class="project-details">
+                <ul class="project-points"><li>개발자, 테스터, 관리자별 기능 정의</li><li>테스트 참여와 인증, 피드백 절차 설계</li><li>사업계획 발표</li></ul>
+              </div>
             </article>
           </div>
         </div>
@@ -376,6 +398,82 @@
     </main>
     <footer class="site-footer"><p>조범규 / JO BEOMGYU<br>게임 클라이언트 프로그래머</p><a href="#top">맨 위로 ↑</a></footer>
   </div>
+  <!-- NRF 상세 내용은 카드의 기존 소개와 분리해 관리합니다. -->
+  <template id="nrf-detail">
+    <section class="project-case">
+      <h3>게임 화면과 시스템 구조</h3>
+      <figure class="project-detail-figure gameplay">
+        <a href="assets/projects/nrf-details/gameplay.webp" target="_blank" rel="noopener noreferrer" aria-label="게임 내 데스크톱과 주요 프로그램 크게 보기, 새 탭">
+          <img src="assets/projects/nrf-details/gameplay.webp" alt="가상 데스크톱에서 브라우저, 채팅과 파일 탐색기를 함께 실행한 No Results Found 게임 화면" width="1920" height="1080" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <figure class="project-detail-figure">
+        <a href="assets/projects/nrf-details/system-architecture.png" target="_blank" rel="noopener noreferrer" aria-label="프로그램 실행, 스토리 이벤트와 저장 데이터의 연결 구조 크게 보기, 새 탭">
+          <img src="assets/projects/nrf-details/system-architecture.png" alt="프로그램 정의 데이터와 창 관리, 스토리 규칙과 이벤트 버스, 게임 진행 상태 및 저장 데이터의 연결을 나타낸 시스템 구조도" width="1800" height="928" loading="lazy" decoding="async">
+        </a>
+        <figcaption>프로그램 실행, 스토리 이벤트와 저장 데이터의 연결 구조</figcaption>
+      </figure>
+    </section>
+    <section class="project-case">
+      <h3>검색과 텍스트 드래그 성능 개선</h3>
+      <dl>
+        <div><dt>문제</dt><dd>검색 결과가 많으면 화면이 멈추고, 결과 표시 후에도 텍스트 드래그가 지연됐습니다.</dd></div>
+        <div><dt>해결</dt><dd>UI 생성과 데이터 바인딩을 프레임별로 분산하고 레이아웃 갱신을 통합했습니다. 이후 TMP 메시 재사용, 공간 인덱스 기반 텍스트 탐색, UI 처리 범위 제한을 적용했습니다.</dd></div>
+        <div><dt>선택 이유</dt><dd>Unity Profiler로 작업 집중과 반복 계산을 확인했습니다. 드래그 로직 개선 후에도 Cull 비용이 남아, 처리하는 UI 자체를 줄이는 방향으로 확장했습니다.</dd></div>
+        <div><dt>결과</dt><dd>검색 시 최대 프레임 시간 <strong>약 5,542ms → 122ms</strong>. 후속 드래그 개선에서는 평균 프레임 시간 <strong>97.9% 감소</strong>, 동일 입력의 선택 문자열과 최종 스크롤 위치 일치를 확인했습니다.</dd></div>
+      </dl>
+      <figure class="project-detail-figure">
+        <a href="assets/projects/nrf-details/search-performance.png" target="_blank" rel="noopener noreferrer" aria-label="검색 결과 UI의 개선 전후 측정 크게 보기, 새 탭">
+          <img src="assets/projects/nrf-details/search-performance.png" alt="검색 UI 개선 전후 최대 프레임 시간 5,542.27ms와 122.48ms, 객체 생성 횟수 각 253회 및 누적 처리 시간 비교" width="1630" height="750" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <figure class="project-detail-figure">
+        <a href="assets/projects/nrf-details/drag-performance.png" target="_blank" rel="noopener noreferrer" aria-label="텍스트 드래그와 UI 처리 범위의 단계별 개선 크게 보기, 새 탭">
+          <img src="assets/projects/nrf-details/drag-performance.png" alt="개선 전, 드래그 최적화 후, UI 표시와 레이아웃 최적화 후의 최대 및 평균 프레임 시간과 Cull 비용 비교" width="1610" height="372" loading="lazy" decoding="async">
+        </a>
+      </figure>
+    </section>
+    <section class="project-case">
+      <h3>기획자를 위한 콘텐츠 제작 에디터</h3>
+      <dl>
+        <div><dt>문제</dt><dd>다국어 지원으로 보고서 데이터가 복잡해져, 기획자가 중첩된 항목을 오가며 본문과 빈칸별 정답을 반복 입력해야 했습니다.</dd></div>
+        <div><dt>해결</dt><dd>본문과 정답을 일괄 붙여 넣고, 세부 내용은 개별 화면에서 수정하는 Unity 커스텀 에디터를 만들었습니다.</dd></div>
+        <div><dt>선택 이유</dt><dd>스프레드시트의 다국어 비교 편의성보다 기존 ScriptableObject와 게임 설정의 연결 유지를 우선했습니다. 팀원들이 Unity에 익숙해 학습 부담도 적었습니다. 대신 빈칸 표기와 정답 순서 규칙을 함께 안내했습니다.</dd></div>
+        <div><dt>결과</dt><dd>새 보고서 반영 시간 <strong>6분 → 1분 50초</strong>, 약 <strong>69.4% 단축</strong>.</dd></div>
+      </dl>
+      <figure class="project-detail-figure">
+        <a href="assets/projects/nrf-details/editor-efficiency.png" target="_blank" rel="noopener noreferrer" aria-label="콘텐츠 제작 에디터 도입 전후 보고서 반영 시간 크게 보기, 새 탭">
+          <img src="assets/projects/nrf-details/editor-efficiency.png" alt="콘텐츠 에디터 도입 전 보고서 반영 시간 6분과 도입 후 1분 50초 비교, 69.4% 단축" width="1620" height="362" loading="lazy" decoding="async">
+        </a>
+      </figure>
+    </section>
+    <section class="project-case">
+      <h3>로그를 활용한 정답 판정 개선</h3>
+      <dl>
+        <div><dt>문제</dt><dd>특정 문항을 풀기 어렵다는 피드백이 반복됐고, 의도한 대상을 맞혀도 답안 표현 차이로 오답 처리되고 있었습니다.</dd></div>
+        <div><dt>해결</dt><dd>Unity Analytics 데이터를 SQL로 조회해 플레이어별 최초 답안을 분석하고, 빈도가 높았던 ‘내해망’을 허용 답안에 추가했습니다.</dd></div>
+        <div><dt>선택 이유</dt><dd>반복 제출의 영향을 줄이기 위해 최초 답안을 기준으로 삼았습니다. 출시 후 빠른 대응과 기존 문맥 유지를 위해 질문 수정 대신 허용 답안을 확장했습니다.</dd></div>
+        <div><dt>결과</dt><dd>첫 유효 답안 정답률 <strong>30.5% → 81.4%</strong>. 과도한 로그 전송으로 비용도 발생해, 수집 항목과 전송 빈도 설계의 중요성을 배웠습니다.</dd></div>
+      </dl>
+      <figure class="project-detail-figure">
+        <a href="assets/projects/nrf-details/answer-distribution.png" target="_blank" rel="noopener noreferrer" aria-label="개선 전 주요 한글 답안과 판정 결과 크게 보기, 새 탭">
+          <img src="assets/projects/nrf-details/answer-distribution.png" alt="개선 전 한글 답안 분포: 내해망 49.97%인 1,466명 오답, 내해망 교신기록 30.33%인 890명 정답, 커뮤니티 10.29%인 302명 오답" width="1610" height="400" loading="lazy" decoding="async">
+        </a>
+      </figure>
+      <figure class="project-detail-figure">
+        <a href="assets/projects/nrf-details/answer-accuracy.png" target="_blank" rel="noopener noreferrer" aria-label="허용 답안 추가 전후 정답률 변화 크게 보기, 새 탭">
+          <img src="assets/projects/nrf-details/answer-accuracy.png" alt="내해망 문항 정답률이 버전 1.0.1의 30.5%에서 1.0.2의 81.4%로 상승, 개선 전 3,045명과 개선 후 4,793명 비교" width="1620" height="352" loading="lazy" decoding="async">
+        </a>
+      </figure>
+    </section>
+  </template>
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+    <div class="project-dialog-toolbar">
+      <span>프로젝트 상세</span>
+      <button class="project-dialog-close" type="button" autofocus>닫기 <span aria-hidden="true">×</span></button>
+    </div>
+    <div class="project-dialog-content"></div>
+  </dialog>
 </body>
 </html>
 
