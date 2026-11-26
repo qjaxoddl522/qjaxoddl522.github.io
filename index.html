@@ -106,7 +106,7 @@
         <header class="section-heading">
           <p class="section-number">03 / PROJECTS</p>
           <h2 id="projects-title">프로젝트</h2>
-          <p>게임 개발과 도구 제작<br>NRF 카드에서 문제 해결과 기술 선택 과정을 확인하세요.</p>
+          <p>게임 개발과 도구 제작<br>상세 보기에서 문제 해결과 기술 선택 과정을 확인하세요.</p>
         </header>
         <div class="project-content">
           <!-- 프로젝트 링크는 영상, 실행/스토어, GitHub 순서로 배치합니다. -->
@@ -246,7 +246,7 @@
                 </p>
               </div>
             </article>
-            <article class="project-entry" aria-labelledby="spell-timer-title">
+            <article class="project-card" aria-labelledby="spell-timer-title" data-detail="spell-timer-detail">
               <figure class="project-media">
                 <img src="assets/projects/spell-timer.jpg" alt="챔피언별 소환사 주문과 남은 시간을 보여주는 오버레이" width="135" height="200" loading="lazy" decoding="async">
               </figure>
@@ -465,6 +465,44 @@
           <img src="assets/projects/nrf-details/answer-accuracy.png" alt="내해망 문항 정답률이 버전 1.0.1의 30.5%에서 1.0.2의 81.4%로 상승, 개선 전 3,045명과 개선 후 4,793명 비교" width="1620" height="352" loading="lazy" decoding="async">
         </a>
       </figure>
+    </section>
+  </template>
+  <template id="spell-timer-detail">
+    <section class="project-case">
+      <h3>실행 중인 게임을 기준으로 데이터 수집</h3>
+      <dl>
+        <div><dt>문제</dt><dd>처음에는 닉네임을 입력받아 Riot API로 조회하려 했지만, 이 도구에 필요한 것은 사용자가 플레이 중인 게임의 정보였습니다.</dd></div>
+        <div><dt>해결</dt><dd>로컬 Live Client Data API로 게임 실행 여부와 상대 챔피언, 주문 정보를 조회했습니다. 여기서 얻은 계정 정보를 Riot API 조회에 연결해 참가자와 룬 정보를 보완했습니다.</dd></div>
+        <div><dt>선택 이유</dt><dd>대규모 데이터 수집보다 <strong>현재 실행 중인 게임에서 직접 정보를 얻는 방식</strong>이 도구의 사용 흐름에 맞았습니다.</dd></div>
+      </dl>
+      <p class="project-evidence">
+        <a href="https://app.notion.com/p/ehrtn/1-Api-e28f49f8fba34daeb14bd1900089ce54" target="_blank" rel="noopener noreferrer">API 선택 기록</a>
+        <a href="https://github.com/qjaxoddl522/LOL-SpellTimer/blob/main/LOL_SpellTimer.py#L63" target="_blank" rel="noopener noreferrer">게임 인식과 데이터 연동 코드</a>
+      </p>
+    </section>
+    <section class="project-case">
+      <h3>오버레이 요구에 맞춰 PyQt5로 전환</h3>
+      <dl>
+        <div><dt>문제</dt><dd>tkinter로 기본 대기 화면을 만든 뒤, 게임 위에서 주문을 기록할 수 있는 오버레이 UI가 필요해졌습니다.</dd></div>
+        <div><dt>해결</dt><dd>PyQt5로 전환해 오버레이와 기존 대기 화면을 통일하고, 챔피언 아이콘과 주문 타이머 버튼을 배치했습니다.</dd></div>
+        <div><dt>선택 이유</dt><dd><strong>항상 위에 표시되는 테두리 없는 창</strong>을 Qt의 창 플래그로 구성할 수 있어, 오버레이 요구에 맞춰 선택했습니다.</dd></div>
+      </dl>
+      <p class="project-evidence">
+        <a href="https://app.notion.com/p/ehrtn/3-UI-1d9dbfe0555940d2aeb6c17d233e5255" target="_blank" rel="noopener noreferrer">UI 전환 기록</a>
+        <a href="https://github.com/qjaxoddl522/LOL-SpellTimer/blob/main/LOL_SpellTimer.py" target="_blank" rel="noopener noreferrer">OverlayUI 구현 코드</a>
+      </p>
+    </section>
+    <section class="project-case">
+      <h3>표시 순서가 바뀌어도 타이머 대상 유지</h3>
+      <dl>
+        <div><dt>문제</dt><dd>챔피언 목록 순서가 바뀌면 기존 인덱스와 버튼을 참조하던 타이머 표시가 어긋났습니다. 버튼 목록의 순서를 바꾸는 시도만으로는 해결되지 않았습니다.</dd></div>
+        <div><dt>해결</dt><dd>타이머에 챔피언 ID를 함께 전달해 순서 변경 시 현재 인덱스를 다시 찾았습니다. 화면 갱신 시에도 저장된 쿨타임에서 버튼 이미지와 남은 시간을 다시 표시했습니다.</dd></div>
+        <div><dt>선택 이유</dt><dd>표시 위치는 바뀔 수 있으므로, <strong>타이머가 추적할 대상을 챔피언 ID로 확인</strong>하도록 했습니다.</dd></div>
+      </dl>
+      <p class="project-evidence">
+        <a href="https://app.notion.com/p/ehrtn/4-6bb94105ccdf43c982cd8dbba8fbc58b" target="_blank" rel="noopener noreferrer">문제 해결 기록</a>
+        <a href="https://github.com/qjaxoddl522/LOL-SpellTimer/blob/main/LOL_SpellTimer.py" target="_blank" rel="noopener noreferrer">updateTimer와 refreshUI 코드</a>
+      </p>
     </section>
   </template>
   <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
