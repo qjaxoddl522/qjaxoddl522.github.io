@@ -357,7 +357,6 @@ body.project-dialog-open { position: fixed; width: 100%; overflow: hidden; }
 .academic-facts { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; margin: 22px 0 0; padding-top: 18px; border-top: 1px solid var(--line); }
 .academic-facts dt { color: var(--muted); font-size: 11px; margin-bottom: 7px; }
 .academic-facts dd { margin: 0; font-size: 13px; line-height: 1.7; }
-.academic-facts strong { color: var(--accent); font-size: 20px; font-weight: 650; line-height: 1; }
 .academic-facts dd span { color: var(--muted); font-size: 11px; }
 .training-card .background-entry + .background-entry { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
 .training-card .background-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin: 0 0 7px; font-size: 12px; font-variant-numeric: tabular-nums; }
