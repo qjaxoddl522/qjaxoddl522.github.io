@@ -6,8 +6,8 @@
   <title>조범규 | 게임 클라이언트 프로그래머</title>
   <meta name="theme-color" content="#121614">
   <meta name="description" content="게임 클라이언트 프로그래머 조범규입니다. Unity와 C# 기반 UI 구현, 콘텐츠 제작 도구 개발 경험을 소개합니다.">
-  <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/projects.js" defer></script>
+  <link rel="stylesheet" href="assets/styles.css?v=20261128-cover">
+  <script src="assets/projects.js?v=20261128-cover" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#about">이력서 본문으로 바로가기</a>
@@ -138,7 +138,7 @@
                 <p class="source-note">Steam 평가 2,000+ / 압도적으로 긍정적</p>
               </div>
             </article>
-            <article class="project-entry" aria-labelledby="planter-title">
+            <article class="project-card" aria-labelledby="planter-title" data-detail="planter-detail">
               <figure class="project-media">
                 <img src="assets/projects/planter.png" alt="Planter에서 집 양옆에 식물을 배치하고 다가올 적을 확인하는 플레이 화면" width="955" height="573" loading="lazy" decoding="async">
               </figure>
@@ -400,13 +400,13 @@
   </div>
   <!-- NRF 상세 내용은 카드의 기존 소개와 분리해 관리합니다. -->
   <template id="nrf-detail">
+    <figure class="project-detail-figure gameplay project-detail-cover">
+      <a href="assets/projects/nrf-details/gameplay.webp" target="_blank" rel="noopener noreferrer" aria-label="게임 내 데스크톱과 주요 프로그램 크게 보기, 새 탭">
+        <img src="assets/projects/nrf-details/gameplay.webp" alt="가상 데스크톱에서 브라우저, 채팅과 파일 탐색기를 함께 실행한 No Results Found 게임 화면" width="1920" height="1080" loading="lazy" decoding="async">
+      </a>
+    </figure>
     <section class="project-case">
-      <h3>게임 화면과 시스템 구조</h3>
-      <figure class="project-detail-figure gameplay">
-        <a href="assets/projects/nrf-details/gameplay.webp" target="_blank" rel="noopener noreferrer" aria-label="게임 내 데스크톱과 주요 프로그램 크게 보기, 새 탭">
-          <img src="assets/projects/nrf-details/gameplay.webp" alt="가상 데스크톱에서 브라우저, 채팅과 파일 탐색기를 함께 실행한 No Results Found 게임 화면" width="1920" height="1080" loading="lazy" decoding="async">
-        </a>
-      </figure>
+      <h3>시스템 구조</h3>
       <figure class="project-detail-figure">
         <a href="assets/projects/nrf-details/system-architecture.png" target="_blank" rel="noopener noreferrer" aria-label="프로그램 실행, 스토리 이벤트와 저장 데이터의 연결 구조 크게 보기, 새 탭">
           <img src="assets/projects/nrf-details/system-architecture.png" alt="프로그램 정의 데이터와 창 관리, 스토리 규칙과 이벤트 버스, 게임 진행 상태 및 저장 데이터의 연결을 나타낸 시스템 구조도" width="1800" height="928" loading="lazy" decoding="async">
@@ -465,6 +465,33 @@
           <img src="assets/projects/nrf-details/answer-accuracy.png" alt="내해망 문항 정답률이 버전 1.0.1의 30.5%에서 1.0.2의 81.4%로 상승, 개선 전 3,045명과 개선 후 4,793명 비교" width="1620" height="352" loading="lazy" decoding="async">
         </a>
       </figure>
+    </section>
+  </template>
+  <template id="planter-detail">
+    <section class="project-case">
+      <h3>다음 적을 보고 준비할 수 있도록 웨이브 구성 변경</h3>
+      <dl>
+        <div><dt>문제</dt><dd>초기에는 실행 시 적 데이터를 주입하는 방식으로 구성했습니다. 하지만 플레이 테스트에서, 밤에 식물 배치와 회복을 할 수 없는 만큼 낮에 다음 적을 보고 준비할 정보가 필요하다고 판단했습니다.</dd></div>
+        <div><dt>해결</dt><dd>날짜별 웨이브 후보를 미리 정의하고 낮에 다음 웨이브를 선택하도록 변경했습니다. 선택한 데이터로 적 구성을 예고하고, 밤의 실제 적 생성에도 같은 데이터를 사용했습니다.</dd></div>
+        <div><dt>선택 이유</dt><dd><strong>전투 전에 적 구성을 확정해야 플레이어가 예고를 바탕으로 식물을 배치할 수 있었습니다.</strong> 날짜별 후보 중 하나를 선택하는 방식으로 준비에 필요한 정보를 제공하면서도 웨이브에 변화를 남겼습니다.</dd></div>
+      </dl>
+      <p class="project-evidence">
+        <a href="https://app.notion.com/p/ehrtn/183ca6c1fac580aa9129e0fd3d954aaf" target="_blank" rel="noopener noreferrer">웨이브 기획</a>
+        <a href="https://github.com/qjaxoddl522/Planter/blob/main/Assets/Script/Wave/WaveSpawner.cs#L32" target="_blank" rel="noopener noreferrer">예고와 적 생성 코드</a>
+      </p>
+    </section>
+    <section class="project-case">
+      <h3>프로젝트 규모에 맞춰 시간과 코인 UI에 MVP 적용</h3>
+      <dl>
+        <div><dt>문제</dt><dd>시간과 코인 데이터를 화면 표시와 분리하고 싶었지만, 소규모 프로젝트에 MVVM을 적용하는 것은 구성 부담이 크다고 판단했습니다.</dd></div>
+        <div><dt>해결</dt><dd>시간과 코인에 MVP를 적용했습니다. Model이 값을 관리하고, Presenter가 변경 이벤트를 받아 코인 텍스트와 시간 슬라이더, 낮과 밤 표시를 갱신하도록 구성했습니다.</dd></div>
+        <div><dt>선택 이유</dt><dd><strong>데이터와 UI의 결합도를 낮추면서 구성의 복잡도를 제한하는 것</strong>을 우선했습니다. MVP로 필요한 표시 갱신을 직접 연결하는 방식이 프로젝트 규모에 맞았습니다.</dd></div>
+      </dl>
+      <p class="project-evidence">
+        <a href="https://github.com/qjaxoddl522/Planter/blob/main/README.md#ui" target="_blank" rel="noopener noreferrer">MVP 선택 기록</a>
+        <a href="https://github.com/qjaxoddl522/Planter/blob/main/Assets/Script/MVP/CoinPresenter.cs" target="_blank" rel="noopener noreferrer">코인 UI 코드</a>
+        <a href="https://github.com/qjaxoddl522/Planter/blob/main/Assets/Script/MVP/TimePresenter.cs" target="_blank" rel="noopener noreferrer">시간 UI 코드</a>
+      </p>
     </section>
   </template>
   <template id="spell-timer-detail">

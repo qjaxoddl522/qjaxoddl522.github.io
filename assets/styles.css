@@ -223,6 +223,7 @@ body.project-dialog-open { position: fixed; width: 100%; overflow: hidden; }
 .project-detail-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; line-height: 1.7; }
 .project-detail-figure.gameplay a { background: var(--surface); }
 .project-detail-figure.gameplay img { max-height: 320px; object-fit: contain; }
+.project-detail-figure.project-detail-cover { margin: 0 0 24px; }
 
 
 

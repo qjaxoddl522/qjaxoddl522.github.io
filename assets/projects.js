@@ -9,6 +9,25 @@
 
   function openProject(card, trigger, detail) {
     const fragment = document.createDocumentFragment();
+    const details = detail.content.cloneNode(true);
+    let cover = details.querySelector('.project-detail-cover');
+    if (!cover) {
+      const media = card.querySelector('.project-media');
+      if (media) {
+        cover = media.cloneNode(true);
+        cover.className = 'project-detail-figure gameplay project-detail-cover';
+        for (const image of cover.querySelectorAll('img')) {
+          const link = document.createElement('a');
+          link.href = image.src;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.setAttribute('aria-label', `${image.alt} 크게 보기, 새 탭`);
+          image.replaceWith(link);
+          link.append(image);
+        }
+      }
+    }
+    if (cover) fragment.append(cover);
     const heading = card.querySelector('.project-heading').cloneNode(true);
     const title = document.createElement('h2');
     title.className = 'project-title';
@@ -21,7 +40,7 @@
       const element = card.querySelector(selector);
       if (element) fragment.append(element.cloneNode(true));
     }
-    fragment.append(detail.content.cloneNode(true));
+    fragment.append(details);
     content.replaceChildren(fragment);
     activeTrigger = trigger;
     scrollPosition = window.scrollY;
